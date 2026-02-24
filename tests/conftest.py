@@ -4,7 +4,7 @@ from typing import Any, TypeVar
 import pytest
 from pl_mocks_and_fakes import create_fakes, initialize_mocks
 
-import tests
+from pl_user_io.testing.user_io_fake import UserIOFake
 from tests.constants import (
     PYTEST_INTEGRATION_TEST_MARKERS,
 )
@@ -31,7 +31,7 @@ def pytest_runtest_setup(item: pytest.Item) -> None:
 
     def _mock_code_for_unit_tests() -> None:
         if not _is_integration_test():
-            initialize_mocks(tests)
-            create_fakes(tests)
+            initialize_mocks()
+            create_fakes(UserIOFake)
 
     _mock_code_for_unit_tests()
