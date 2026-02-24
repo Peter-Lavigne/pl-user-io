@@ -210,11 +210,15 @@ wheels = [
 
 [[package]]
 name = "pl-user-io"
-version = "0.0.9"
+version = "0.0.10"
 source = { editable = "." }
 dependencies = [
-    { name = "pl-mocks-and-fakes" },
     { name = "rich" },
+]
+
+[package.optional-dependencies]
+testing = [
+    { name = "pl-mocks-and-fakes" },
 ]
 
 [package.dev-dependencies]
@@ -228,9 +232,10 @@ dev = [
 
 [package.metadata]
 requires-dist = [
-    { name = "pl-mocks-and-fakes", specifier = "==0.0.24" },
+    { name = "pl-mocks-and-fakes", marker = "extra == 'testing'", specifier = "==0.0.24" },
     { name = "rich", specifier = ">=14.3.3" },
 ]
+provides-extras = ["testing"]
 
 [package.metadata.requires-dev]
 dev = [
