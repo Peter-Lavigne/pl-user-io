@@ -1,30 +1,8 @@
 from pl_mocks_and_fakes import mock_for
 
 from pl_user_io.str_input import str_input
+from pl_user_io.testing.stubs import input_count, stub_str_input
 from pl_user_io.yes_no import yes_no
-from tests.str_input_test import input_count, stub_str_input
-from tests.user_io_fake import (
-    assert_displayed,
-    assert_displayed_exactly_once,
-    assert_not_displayed,
-)
-
-
-def assert_asked_yes_no(question: str) -> None:
-    """Assert that the yes/no question was asked to the user."""
-    assert_displayed(f"{question} (y/n)")
-
-
-def assert_asked_yes_no_exactly_once(question: str) -> None:
-    assert_displayed_exactly_once(f"{question} (y/n)")
-
-
-def assert_not_asked_yes_no(question: str) -> None:
-    assert_not_displayed(f"{question} (y/n)")
-
-
-def stub_yes_no(question: str, answer: bool) -> None:
-    stub_str_input("y" if answer else "n", f"{question} (y/n)")
 
 
 def test_returns_true_for_yes() -> None:

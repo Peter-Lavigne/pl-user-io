@@ -1,13 +1,11 @@
 [project]
 name = "pl-user-io"
-version = "0.0.3"
+version = "0.0.4"
 description = "User input and output utilities."
 readme = "README.md"
 authors = [{ name = "Peter Lavigne" }]
 requires-python = ">=3.12"
-dependencies = [
-    "rich>=14.3.3",
-]
+dependencies = ["rich>=14.3.3"]
 license = "Apache-2.0"
 license-files = ["LICENSE"]
 classifiers = ["License :: OSI Approved :: Apache Software License"]
@@ -55,9 +53,7 @@ extend = "copied/pyproject.toml"
 typeCheckingMode = "strict"
 
 [tool.coverage.run]
-omit = [
-    "tests/*",
-]
+omit = ["tests/*", "src/pl_user_io/testing/*"]
 
 [tool.coverage.report]
 # Ignore all functions mocked in unit tests.
