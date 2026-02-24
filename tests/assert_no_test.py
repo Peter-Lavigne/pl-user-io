@@ -1,7 +1,7 @@
 import pytest
 
 from pl_user_io.assert_no import assert_no
-from tests.yes_no_test import stub_yes_no
+from pl_user_io.testing.stubs import stub_yes_no
 
 ARBITRARY_QUESTION = "Is this a test?"
 

@@ -7,11 +7,6 @@ from pl_user_io.delay import delay
 from pl_user_io.loading_spinner import loading_spinner
 from tests.conftest import with_pytestmarks
 from tests.constants import PYTEST_DEPENDENT_MARKER, PYTEST_MANUAL_MARKERS
-from tests.user_io_fake import assert_displayed
-
-
-def assert_loading_spinner_displayed(event: str) -> None:
-    assert_displayed(f"✓ {event}")
 
 
 @with_pytestmarks(*PYTEST_MANUAL_MARKERS)

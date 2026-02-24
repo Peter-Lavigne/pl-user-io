@@ -5,7 +5,7 @@ import pytest
 from pl_mocks_and_fakes import create_fakes, initialize_mocks
 
 import pl_user_io
-import tests
+import pl_user_io.testing
 from tests.constants import (
     PYTEST_INTEGRATION_TEST_MARKERS,
 )
@@ -33,6 +33,6 @@ def pytest_runtest_setup(item: pytest.Item) -> None:
     def _mock_code_for_unit_tests() -> None:
         if not _is_integration_test():
             initialize_mocks(pl_user_io)
-            create_fakes(tests)
+            create_fakes(pl_user_io.testing)
 
     _mock_code_for_unit_tests()
