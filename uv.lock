@@ -166,7 +166,7 @@ wheels = [
 
 [[package]]
 name = "pl-user-io"
-version = "0.0.7"
+version = "0.0.8"
 source = { editable = "." }
 dependencies = [
     { name = "pl-mocks-and-fakes" },
