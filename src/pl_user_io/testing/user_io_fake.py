@@ -5,7 +5,7 @@ from textwrap import dedent
 from typing import Any, TypedDict
 
 import pytest
-from pl_mocks_and_fakes import Fake, fake_for, mock_for
+from pl_mocks_and_fakes import Fake, fake, fake_for, mock_for
 
 from pl_user_io.display import display
 from pl_user_io.loading_spinner import loading_spinner
@@ -19,6 +19,7 @@ class PrintKwargs(TypedDict, total=False):
     end: str | None
 
 
+@fake()
 class UserIOFake(Fake):
     def __init__(self) -> None:
         def _wait_for_enter_side_effect() -> None:
