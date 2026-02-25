@@ -1,6 +1,6 @@
 [project]
 name = "pl-user-io"
-version = "0.0.13"
+version = "0.0.14"
 description = "User input and output utilities."
 readme = "README.md"
 authors = [{ name = "Peter Lavigne" }]
@@ -20,11 +20,10 @@ build-backend = "uv_build"
 
 [dependency-groups]
 dev = [
-    "pl-ci-cd>=0.0.12",
-    "pyright>=1.1.408",
-    "pytest>=9.0.2",
-    "pytest-cov>=7.0.0",
-    "ruff>=0.15.2",
+    "pyright==1.1.408",
+    "pytest==9.0.2",
+    "pytest-cov==7.0.0",
+    "ruff==0.15.2",
 ]
 
 [tool.pytest.ini_options]
