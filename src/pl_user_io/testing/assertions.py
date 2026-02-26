@@ -2,6 +2,7 @@ import pytest
 from pl_mocks_and_fakes import mock_for
 
 from pl_user_io.open_url import open_url
+from pl_user_io.testing.helpers import all_instances_of_question
 from pl_user_io.testing.user_io_fake import (
     assert_displayed,
     assert_displayed_exactly_once,
@@ -37,3 +38,11 @@ def assert_task_not_performed(task_str: str, url_opened: str | None = None) -> N
 
 def assert_loading_spinner_displayed(event: str) -> None:
     assert_displayed(f"✓ {event}")
+
+
+def assert_multiple_choice_displayed(question: str) -> None:
+    assert len(all_instances_of_question(question)) > 0
+
+
+def assert_multiple_choice_not_displayed(question: str) -> None:
+    assert len(all_instances_of_question(question)) == 0
