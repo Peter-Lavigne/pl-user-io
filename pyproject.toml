@@ -1,11 +1,11 @@
 [project]
 name = "pl-user-io"
-version = "0.0.16"
+version = "0.0.17"
 description = "User input and output utilities."
 readme = "README.md"
 authors = [{ name = "Peter Lavigne" }]
 requires-python = ">=3.12"
-dependencies = ["rich>=14.3.3", "pl-mocks-and-fakes==0.0.29"]
+dependencies = ["rich>=14.3.3", "pl-mocks-and-fakes==0.0.30"]
 license = "Apache-2.0"
 license-files = ["LICENSE"]
 classifiers = ["License :: OSI Approved :: Apache Software License"]
