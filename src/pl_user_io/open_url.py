@@ -13,4 +13,5 @@ def open_url(url: str) -> None:
         [FIREFOX_ABSOLUTE_PATH, url],
         stdout=subprocess.DEVNULL,
         stderr=subprocess.DEVNULL,
+        start_new_session=True,
     )
