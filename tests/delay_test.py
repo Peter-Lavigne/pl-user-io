@@ -4,11 +4,11 @@ from pl_user_io.assert_yes import assert_yes
 from pl_user_io.delay import delay
 from pl_user_io.display import display
 from pl_user_io.task import task
-from tests.constants import PYTEST_INTEGRATION_MARKER
+from tests.conftest import with_pytestmarks
+from tests.constants import PYTEST_MANUAL_MARKERS
 
-pytestmark = PYTEST_INTEGRATION_MARKER
 
-
+@with_pytestmarks(*PYTEST_MANUAL_MARKERS)
 def test_pauses_execution() -> None:
     task("After pressing enter, start counting from 0 until `Done.` is printed.")
     delay(timedelta(seconds=5))

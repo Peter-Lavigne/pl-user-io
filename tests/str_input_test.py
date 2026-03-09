@@ -1,7 +1,7 @@
 from pl_user_io.str_input import str_input
-from tests.constants import PYTEST_INTEGRATION_MARKER
+from tests.constants import PYTEST_MANUAL_MARKERS
 
-pytestmark = PYTEST_INTEGRATION_MARKER
+pytestmark = PYTEST_MANUAL_MARKERS
 
 
 def test_asks_for_user_input() -> None:

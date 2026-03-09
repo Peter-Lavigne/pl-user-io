@@ -4,9 +4,9 @@ from pl_user_io.display import display
 from pl_user_io.pause_to_read import pause_to_read
 from pl_user_io.task import task
 from pl_user_io.yes_no import yes_no
-from tests.constants import PYTEST_INTEGRATION_MARKER
+from tests.constants import PYTEST_MANUAL_MARKERS
 
-pytestmark = PYTEST_INTEGRATION_MARKER
+pytestmark = PYTEST_MANUAL_MARKERS
 
 
 def _assert_readable() -> None:

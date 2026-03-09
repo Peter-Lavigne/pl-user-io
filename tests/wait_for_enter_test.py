@@ -1,9 +1,9 @@
 from pl_user_io.assert_yes import assert_yes
 from pl_user_io.display import display
 from pl_user_io.wait_for_enter import wait_for_enter
-from tests.constants import PYTEST_INTEGRATION_MARKER
+from tests.constants import PYTEST_MANUAL_MARKERS
 
-pytestmark = PYTEST_INTEGRATION_MARKER
+pytestmark = PYTEST_MANUAL_MARKERS
 
 
 def test_success() -> None:
